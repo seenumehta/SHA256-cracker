@@ -7,6 +7,18 @@ from queue import Queue
 NUM_THREADS = 8  
 RAINBOW_TABLE_FILE = "sha256_rainbow_table.txt"
 
+def show_banner():
+    banner = r"""
+     █████╗ ██╗     ███████╗██╗  ██╗ █████╗ ████████╗
+    ██╔══██╗██║     ██╔════╝██║  ██║██╔══██╗╚══██╔══╝
+    ███████║██║     ███████╗███████║███████║   ██║   
+    ██╔══██║██║     ╚════██║██╔══██║██╔══██║   ██║   
+    ██║  ██║███████╗███████║██║  ██║██║  ██║   ██║   
+    ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
+    🔥 SHA-256 Cracker | Created by anoop 🔥
+    """
+    print(banner)
+
 def sha256_hash(text):
     return hashlib.sha256(text.encode()).hexdigest()
 
@@ -75,6 +87,8 @@ def run_hashcat(target_hash, wordlist_file):
         print("Hashcat not found.")
     except subprocess.CalledProcessError:
         print("Hashcat failed.")
+
+show_banner()
 
 hash_to_crack = input("Enter SHA-256 hash: ").strip()
 wordlist_file = input("Enter wordlist file: ").strip()
