@@ -31,7 +31,7 @@ sudo apt update && sudo apt install hashcat -y
 ### Clone the Repository
 
 ```sh
-git clone https://github.com/yourusername/sha256-cracker.git
+git clone https://github.com/seenumehta/sha256-cracker.git
 cd sha256-cracker
 ```
 
