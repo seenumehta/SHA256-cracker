@@ -1,66 +1,77 @@
-# SHA256-cracker
-📖 User Guide: Anoop's SHA-256 Cracker
+# SHA-256 Cracker
 
-🔹 Step 1: Install Requirements
+## Overview
 
-For Linux (Ubuntu/Debian-based distros):
+SHA-256 Cracker is a simple and efficient tool for cracking SHA-256 hashes using multiple methods:
 
-sudo apt update
-sudo apt install python3 python3-pip git hashcat
-pip install tqdm
+1. **Multithreading** - Uses multiple threads for faster dictionary-based attacks.
+2. **Hashcat** - Leverages GPU acceleration for rapid cracking.
+3. **Rainbow Table** - Uses precomputed hashes for quick lookups.
 
-For Android (Termux users):
+## Features
 
-pkg update && pkg upgrade
-pkg install python git
-pip install tqdm
+- Supports large wordlists (e.g., `rockyou.txt`).
+- Implements multithreading for increased speed.
+- Uses Hashcat for GPU acceleration.
+- Supports Rainbow Table lookups for precomputed hash matching.
 
+## Installation
 
----
+### Prerequisites
 
-🔹 Step 2: Clone the Repository
+- Python 3.x
+- Hashcat (for GPU-based cracking)
 
-git clone https://github.com/seenumehta/SHA256-Cracker.git
-cd SHA256-Cracker
+### Install Hashcat (Linux)
 
+```sh
+sudo apt update && sudo apt install hashcat -y
+```
 
----
+### Clone the Repository
 
-🔹 Step 3: Run the Script
+```sh
+git clone https://github.com/yourusername/sha256-cracker.git
+cd sha256-cracker
+```
 
-python3 anoop_sha256_cracker.py
+## Usage
 
+Run the script and follow the prompts:
 
----
+```sh
+python sha256_cracker.py
+```
 
-🔹 Step 4: Enter Hash & Wordlist
+### Example Usage
 
-Enter the SHA-256 hash you want to crack.
+#### Cracking with a Dictionary (Multithreading)
 
-Provide the path to the wordlist (e.g., rockyou.txt).
+1. Run the script.
+2. Enter the SHA-256 hash to crack.
+3. Provide the wordlist file (e.g., `rockyou.txt`).
+4. Select option `1` for multithreading.
 
+#### Cracking with Hashcat (GPU Acceleration)
 
+1. Run the script.
+2. Enter the SHA-256 hash to crack.
+3. Provide the wordlist file.
+4. Select option `2` to use Hashcat.
 
----
+#### Using Rainbow Table
 
-🔹 Step 5: Choose Cracking Method
+1. Run the script.
+2. Enter the SHA-256 hash.
+3. Select option `3` to search in the Rainbow Table.
 
-1️⃣ Multithreading (CPU-based, fast)
-2️⃣ Hashcat (GPU-accelerated, ultra-fast)
-3️⃣ Rainbow Table (Precomputed, instant lookup)
+If the Rainbow Table is not found, the script provides an option to generate one.
 
+## Contributing
 
----
+Feel free to fork the repository and submit pull requests for improvements.
 
-🔹 Step 6: Get Results
+## License
 
-If the hash is found, it will display the cracked password.
-
-If not found, try a larger wordlist or use GPU acceleration with Hashcat.
-
-
-
----
-
-That's it! 🚀 Happy cracking, Anoop! 🔥
+This project is open-source under the MIT License.
 
