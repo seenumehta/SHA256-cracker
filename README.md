@@ -20,7 +20,7 @@ pip install tqdm
 
 🔹 Step 2: Clone the Repository
 
-git clone https://github.com/YOUR-USERNAME/SHA256-Cracker.git
+git clone https://github.com/seenumehta/SHA256-Cracker.git
 cd SHA256-Cracker
 
 
